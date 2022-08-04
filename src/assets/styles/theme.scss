@@ -1,0 +1,19 @@
+/// @name theme
+
+@mixin css-var(
+  $brand-color
+) {
+  #{--brand-color}: $brand-color
+}
+
+@mixin appLightTheme() {
+  @include css-var(
+          $brand-color: #94B49F,
+  )
+}
+
+@mixin appDarkTheme() {
+  @include css-var(
+          $brand-color: #FCF8E8,
+  )
+}

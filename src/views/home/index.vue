@@ -4,6 +4,8 @@ import { useToggle, useDark } from '@vueuse/core'
 const isDark = useDark()
 console.log(isDark)
 const toggleDark = useToggle(isDark)
+
+
 </script>
 
 <template>
@@ -15,10 +17,15 @@ const toggleDark = useToggle(isDark)
       @change="toggleDark"
   />
   <br>
-  {{isDark ? 'Dark' : 'Light'}}
+  <div>
+
+    {{isDark ? 'Dark' : 'Light'}}
+  </div>
 home
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+div {
+  color: $brand-color;
+}
 </style>

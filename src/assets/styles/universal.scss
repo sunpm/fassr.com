@@ -1,0 +1,19 @@
+@import "theme";
+
+:root {
+  // theme
+  &[data-theme='light'] {
+    @include appLightTheme();
+  }
+  &[data-theme='dark'] {
+    @include appDarkTheme();
+  }
+}
+
+html {
+  @include appLightTheme();
+}
+
+html.dark {
+  @include appDarkTheme();
+}
