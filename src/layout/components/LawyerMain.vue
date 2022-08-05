@@ -17,6 +17,8 @@
 
 <style scoped lang="scss">
 .main {
-  padding-top: $navbar-height;
+  padding-top: $navbar-height + 20px;
+  width: $body-width;
+  margin: auto;
 }
 </style>

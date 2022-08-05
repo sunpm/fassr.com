@@ -26,14 +26,14 @@ import LoginBtn from './LoginBtn.vue'
 .header {
   position: fixed;
   width: 100%;
-  z-index: $z-index-top;
+  z-index: $z-index-header;
   border-bottom: 1px solid $border-color;
   background-image: radial-gradient(transparent 1px,$bg-color 1px);
   background-size: 4px 4px;
   backdrop-filter: saturate(50%) blur(4px);
   .header-container {
     margin: auto;
-    max-width: $navbar-width;
+    max-width: $body-width;
     height: $navbar-height;
 
     .logo-container {
