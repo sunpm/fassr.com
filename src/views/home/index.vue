@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import { useToggle, useDark } from '@vueuse/core'
+import {useTheme} from '@/composables'
 
-const isDark = useDark()
-console.log(isDark)
-const toggleDark = useToggle(isDark)
-
+const {isDark, toggleDark} = useTheme()
 
 </script>
 

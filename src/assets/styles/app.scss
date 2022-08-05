@@ -1,12 +1,14 @@
+@import "reset";
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  height: 10000px;
 }
 // variables
 @import './variables.scss';
 
 // universal style
 @import './universal.scss';
+
+
+// class
+@import "class";

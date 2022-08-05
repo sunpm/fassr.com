@@ -1,19 +1,28 @@
 /// @name theme
 
 @mixin css-var(
-  $brand-color
+  $brand-color,
+  $border-color,
+  $bg-color
 ) {
-  #{--brand-color}: $brand-color
+  #{--brand-color}: $brand-color;
+  #{--border-color}: $border-color;
+  #{--bg-color}: $bg-color;
 }
 
 @mixin appLightTheme() {
   @include css-var(
-          $brand-color: #94B49F,
+          $brand-color: #6485ff,
+          $border-color: var(--el-border-color),
+          $bg-color: var(--el-bg-color),
   )
 }
 
 @mixin appDarkTheme() {
   @include css-var(
-          $brand-color: #FCF8E8,
+          $brand-color: #6485ff,
+          $border-color: var(--el-border-color),
+          $bg-color: var(--el-bg-color),
+
   )
 }
