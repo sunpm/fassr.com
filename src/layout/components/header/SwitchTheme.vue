@@ -15,7 +15,7 @@ const {isDark} = useTheme()
 //* From uiverse.io by @alexruix */
 /* The switch - the box around the slider */
 .switch {
-  font-size: 17px;
+  font-size: 15px;
   position: relative;
   display: inline-block;
   width: 3.5em;
@@ -31,14 +31,13 @@ const {isDark} = useTheme()
 
 /* The slider */
 .slider {
-  --background: #28096b;
   position: absolute;
   cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--background);
+  background-color: $border-color;
   transition: .5s;
   border-radius: 30px;
 }
@@ -51,20 +50,16 @@ const {isDark} = useTheme()
   border-radius: 50%;
   left: 10%;
   bottom: 15%;
-
-  transform: translateX(100%);
   box-shadow: inset 15px -4px 0px 15px #fff000;
-  background: var(--background);
   transition: .5s;
 }
 
 input:checked + .slider {
-  --background: #b7a9d5;
 }
 
 input:checked + .slider:before {
+  transform: translateX(100%);
   box-shadow: inset 8px -4px 0px 0px #fff000;
-  transform: translateX(0);
 }
 
 </style>

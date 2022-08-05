@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import SwitchTheme from './SwitchTheme.vue'
+import SearchInput from './SearchInput.vue'
+import LoginBtn from './LoginBtn.vue'
 </script>
 
 <template>
@@ -10,8 +12,10 @@ import SwitchTheme from './SwitchTheme.vue'
           <img class="logo" src="https://element-plus.gitee.io/images/element-plus-logo.svg" alt="Element Plus Logo">
         </router-link>
       </div>
-      <div class="content">
+      <div class="content flex-item">
+        <SearchInput />
         <SwitchTheme />
+        <LoginBtn />
       </div>
     </div>
 
@@ -23,13 +27,14 @@ import SwitchTheme from './SwitchTheme.vue'
   position: fixed;
   width: 100%;
   z-index: $z-index-top;
+  border-bottom: 1px solid $border-color;
+  background-image: radial-gradient(transparent 1px,$bg-color 1px);
+  background-size: 4px 4px;
+  backdrop-filter: saturate(50%) blur(4px);
   .header-container {
-    padding: $navbar-padding;
+    margin: auto;
+    max-width: $navbar-width;
     height: $navbar-height;
-    border-bottom: 1px solid $border-color;
-    background-image: radial-gradient(transparent 1px,$bg-color 1px);
-    background-size: 4px 4px;
-    backdrop-filter: saturate(50%) blur(4px);
 
     .logo-container {
       height: 100%;
@@ -39,6 +44,16 @@ import SwitchTheme from './SwitchTheme.vue'
 
         .logo {
           height: 100%;
+        }
+      }
+    }
+    .content {
+      display: flex;
+      justify-content: flex-end;
+      > * {
+        margin: 0 $navbar-item-margin;
+        &:last-child {
+          margin-right: 0;
         }
       }
     }
