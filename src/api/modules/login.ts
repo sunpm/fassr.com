@@ -13,5 +13,5 @@ namespace Login {
 // 用户登录
 export const login = (params: Login.LoginReqForm) => {
   // 返回的数据格式可以和服务端约定
-  return http.post<Login.LoginResData>('/user/login', params);
+  return http.post<Login.LoginResData>('https://tysd.throttled.cn/app/story/comment/page', params);
 }

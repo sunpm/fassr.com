@@ -1,28 +1,23 @@
 <script setup lang="ts">
-import {useTheme} from '@/composables'
-
-const {isDark, toggleDark} = useTheme()
+import CategoryNav from '@/components/common/CategoryNav.vue'
+// import {login} from '@/api'
+//
+// login()
 
 </script>
 
 <template>
-  <br>
-  <el-switch
-      v-model="isDark"
-      active-text="黑夜"
-      inactive-text="白天"
-      @change="toggleDark"
-  />
-  <br>
-  <div>
-
-    {{isDark ? 'Dark' : 'Light'}}
+  <div class="container flex">
+    <CategoryNav />
+    <div class="box flex-item container-box"></div>
   </div>
-home
 </template>
 
 <style scoped lang="scss">
-div {
-  color: $brand-color;
+.container {
+  align-items: start;
+  .box {
+    margin: 0 $box-margin;
+  }
 }
 </style>

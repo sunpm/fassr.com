@@ -14,3 +14,10 @@
   justify-content: center;
   align-items: center;
 }
+
+.container-box {
+  background-color: var(--box-bg-color);
+  transition: background-color .2s;
+  box-shadow: var(--shadow-border);
+  border-radius: 12px;
+}

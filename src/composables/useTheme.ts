@@ -7,9 +7,9 @@ export const useTheme = () => {
   const toggleDark = useToggle(isDark)
 
   watch(isDark, (newValue) => {
-    let str = '您已切换到浅色模式'
+    let str = '☀️您已切换到浅色模式☀️'
     if (newValue) {
-      str = '您已切换到深色模式'
+      str = '🌙您已切换到深色模式🌙'
     }
     ElMessage.success(str);
   })

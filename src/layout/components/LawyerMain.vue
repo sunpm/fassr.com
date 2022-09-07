@@ -5,12 +5,12 @@
 <template>
   <main class="main">
 
-    <router-link to="/">
+    <!--<router-link to="/">
       <el-button>Go to Home</el-button>
     </router-link>
     <router-link to="/post">
       <el-button>Go to Post</el-button>
-    </router-link>
+    </router-link>-->
     <router-view/>
   </main>
 </template>

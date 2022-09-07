@@ -3,18 +3,23 @@
 @mixin css-var(
   $brand-color,
   $border-color,
-  $bg-color
+  $bg-color,
+  $box-bg-color,
 ) {
   #{--brand-color}: $brand-color;
   #{--border-color}: $border-color;
   #{--bg-color}: $bg-color;
+  #{--box-bg-color}: $box-bg-color;
+  #{--shadow-border}: 0 8px 16px -4px $border-color;
 }
 
 @mixin appLightTheme() {
   @include css-var(
           $brand-color: #6485ff,
           $border-color: var(--el-border-color),
-          $bg-color: var(--el-bg-color),
+          //$bg-color: var(--el-bg-color),
+          $bg-color: #f7f9fe,
+          $box-bg-color: #fff,
   )
 }
 
@@ -22,7 +27,9 @@
   @include css-var(
           $brand-color: #6485ff,
           $border-color: var(--el-border-color),
-          $bg-color: var(--el-bg-color),
+          //$bg-color: var(--el-bg-color),
+          $bg-color: #18171d,
+          $box-bg-color: #1d1b26,
 
   )
 }
